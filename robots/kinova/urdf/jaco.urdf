@@ -71,7 +71,7 @@
   <link name="j2s7s300_link_base">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/base.dae"/>
+        <mesh filename="package://kinova/meshes/base.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -79,7 +79,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/base.dae"/>
+        <mesh filename="package://kinova/meshes/base.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -99,7 +99,7 @@
   <link name="j2s7s300_link_1">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/shoulder.dae"/>
+        <mesh filename="package://kinova/meshes/shoulder.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -107,12 +107,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_big.STL"/>
+        <mesh filename="package://kinova/meshes/ring_big.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/shoulder.dae"/>
+        <mesh filename="package://kinova/meshes/shoulder.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -142,7 +142,7 @@
   <link name="j2s7s300_link_2">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/arm_half_1.dae"/>
+        <mesh filename="package://kinova/meshes/arm_half_1.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -150,12 +150,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_big.STL"/>
+        <mesh filename="package://kinova/meshes/ring_big.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/arm_half_1.dae"/>
+        <mesh filename="package://kinova/meshes/arm_half_1.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -185,7 +185,7 @@
   <link name="j2s7s300_link_3">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/arm_half_2.dae"/>
+        <mesh filename="package://kinova/meshes/arm_half_2.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -193,12 +193,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_big.STL"/>
+        <mesh filename="package://kinova/meshes/ring_big.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/arm_half_2.dae"/>
+        <mesh filename="package://kinova/meshes/arm_half_2.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -228,7 +228,7 @@
   <link name="j2s7s300_link_4">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/forearm.dae"/>
+        <mesh filename="package://kinova/meshes/forearm.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -236,12 +236,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_small.STL"/>
+        <mesh filename="package://kinova/meshes/ring_small.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/forearm.dae"/>
+        <mesh filename="package://kinova/meshes/forearm.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -271,7 +271,7 @@
   <link name="j2s7s300_link_5">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/wrist_spherical_1.dae"/>
+        <mesh filename="package://kinova/meshes/wrist_spherical_1.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -279,12 +279,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_small.STL"/>
+        <mesh filename="package://kinova/meshes/ring_small.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/wrist_spherical_1.dae"/>
+        <mesh filename="package://kinova/meshes/wrist_spherical_1.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -314,7 +314,7 @@
   <link name="j2s7s300_link_6">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/wrist_spherical_2.dae"/>
+        <mesh filename="package://kinova/meshes/wrist_spherical_2.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -322,12 +322,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_small.STL"/>
+        <mesh filename="package://kinova/meshes/ring_small.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/wrist_spherical_2.dae"/>
+        <mesh filename="package://kinova/meshes/wrist_spherical_2.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -357,7 +357,7 @@
   <link name="j2s7s300_link_7">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/hand_3finger.dae"/>
+        <mesh filename="package://kinova/meshes/hand_3finger.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -365,12 +365,12 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/ring_small.STL"/>
+        <mesh filename="package://kinova/meshes/ring_small.STL"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/hand_3finger.dae"/>
+        <mesh filename="package://kinova/meshes/hand_3finger.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -419,7 +419,7 @@
   <link name="j2s7s300_link_finger_1">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_proximal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_proximal.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -427,7 +427,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_proximal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_proximal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -456,7 +456,7 @@
   <link name="j2s7s300_link_finger_tip_1">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_distal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_distal.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -464,7 +464,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_distal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_distal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -483,7 +483,7 @@
   <link name="j2s7s300_link_finger_2">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_proximal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_proximal.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -491,7 +491,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_proximal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_proximal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -520,7 +520,7 @@
   <link name="j2s7s300_link_finger_tip_2">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_distal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_distal.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -528,7 +528,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_distal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_distal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -547,7 +547,7 @@
   <link name="j2s7s300_link_finger_3">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_proximal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_proximal.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -555,7 +555,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_proximal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_proximal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -584,7 +584,7 @@
   <link name="j2s7s300_link_finger_tip_3">
     <visual>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_distal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_distal.dae"/>
       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -592,7 +592,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://jaco/meshes/finger_distal.dae"/>
+        <mesh filename="package://kinova/meshes/finger_distal.dae"/>
       </geometry>
     </collision>
     <inertial>
