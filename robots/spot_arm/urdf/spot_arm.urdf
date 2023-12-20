@@ -4,6 +4,14 @@
 <material name="silver">
   <color rgba="0.700 0.700 0.700 1.000"/>
 </material>
+
+<link name="base_link"/>
+<joint name="base_link_joint" type="fixed">
+    <origin xyz="0 0 0.4" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="body" />
+</joint>
+
 <link name="body">
     <visual>
         <geometry>
@@ -32,19 +40,20 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/base_link.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_0.dae"/>
     </geometry>
+    <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/base_link_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_0.dae"/>
     </geometry>
   </collision>
 </link>
 
 <joint name="arm_joint1" type="revolute">
-  <origin rpy="0 0 1.5707963267948966" xyz="0.0 0.0 0.065"/>
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.065"/>
   <parent link="base_arm_link"/>
   <child link="link1"/>
   <axis xyz="0.0 0.0 1.0"/>
@@ -60,24 +69,24 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.065"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link1.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_1.dae" />
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.065"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link1_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_1.dae" />
     </geometry>
   </collision>
 </link>
 
 
 <joint name="arm_joint2" type="revolute">
-  <origin rpy="-3.141592653589793 0 0" xyz="0.015 0.0 0.05"/>
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.05"/>
   <parent link="link1"/>
   <child link="link2"/>
-  <axis xyz="1.0 0.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
   <limit effort="100" lower="-3.665191" upper="0.0" velocity="100"/>
 </joint>
 
@@ -89,16 +98,16 @@
     <inertia ixx="0.12979" ixy="0.002625" ixz="0.0" iyy="0.01004" iyz="0.0" izz="0.129493"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.015 -0.0 -0.115"/>
+    <origin rpy="0 3.14159265 0" xyz="-0.03 0.0 0.0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link2.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_2.dae"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.015 -0.0 -0.115"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link2_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_2.dae" />
     </geometry>
   </collision>
 </link>
@@ -106,10 +115,10 @@
 
 
 <joint name="arm_joint3" type="revolute">
-  <origin rpy="0 0 0" xyz="0.002 0.3125 0.0"/>
+  <origin rpy="0 0 0" xyz="0.3125 0.00 0.0"/>
   <parent link="link2"/>
   <child link="link3"/>
-  <axis xyz="1.0 0.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
   <limit effort="100" lower="0.0" upper="2.96706" velocity="100"/>
 </joint>
 
@@ -121,26 +130,26 @@
     <inertia ixx="0.018073" ixy="0.000915" ixz="-0.00101" iyy="0.011789" iyz="0.003728" izz="0.01667"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.017 -0.3125 -0.115"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link3.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_3.dae"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.017 -0.3125 -0.115"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link3_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_3.dae" />
     </geometry>
   </collision>
 </link>
 
 
 <joint name="arm_joint4" type="revolute">
-  <origin rpy="0 0 0" xyz="-0.018 0.138 -0.0675"/>
+  <origin rpy="0 0 0" xyz="0.138 0.0 0.075"/>
   <parent link="link3"/>
   <child link="link4"/>
-  <axis xyz="0.0 1.0 0.0"/>
+  <axis xyz="1.0 0.0 0.0"/>
   <limit effort="100" lower="-2.879793" upper="2.879793" velocity="100"/>
 </joint>
 
@@ -152,29 +161,28 @@
     <inertia ixx="0.066789" ixy="0.011971" ixz="-0.0" iyy="0.014993" iyz="0.0" izz="0.071949"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.001 -0.4505 -0.0475"/>
+    <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link4.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_4.dae" />
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.001 -0.4505 -0.0475"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/link4_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_4.dae" />
     </geometry>
   </collision>
 </link>
 
 
 <joint name="arm_joint5" type="revolute">
-  <origin rpy="0 0 0" xyz="-0.0475 0.24809 0.0"/>
+  <origin rpy="0 0 0" xyz="0.283 0 0.0"/>
   <parent link="link4"/>
   <child link="wrist"/>
-  <axis xyz="1.0 0.0 0.0"/>
+  <axis xyz="0.0 1.0 0.0"/>
   <limit effort="100" lower="-1.570796" upper="1.570796" velocity="100"/>
 </joint>
-
 
 
 <link name="wrist">
@@ -184,25 +192,25 @@
     <inertia ixx="0.00339" ixy="-2.1e-05" ixz="0.0" iyy="0.002242" iyz="-0.0" izz="0.003439"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.0485 -0.69859 -0.0475"/>
+    <origin rpy="1.57079632679 0 0" xyz="0.0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/wrist.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_5.dae" />
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0485 -0.69859 -0.0475"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/wrist_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_5.dae" />
     </geometry>
   </collision>
 </link>
 
 <joint name="arm_joint6" type="revolute">
-  <origin rpy="0 0 0" xyz="0.04 0.081 0.0"/>
+  <origin rpy="0 0 0" xyz="0.056 0.0 0.0"/>
   <parent link="wrist"/>
   <child link="gripper"/>
-  <axis xyz="-0.0 1.0 0.0"/>
+  <axis xyz="1.0 0.0 0.0"/>
   <limit effort="100" lower="-2.96706" upper="2.96706" velocity="100"/>
 </joint>
 
@@ -214,22 +222,22 @@
     <inertia ixx="0.01723" ixy="0.0" ixz="0.0" iyy="0.00734" iyz="-0.003871" izz="0.0153"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.0085 -0.77959 -0.0475"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/gripper.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_6.dae" />
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0085 -0.77959 -0.0475"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/gripper_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_6.dae" />
     </geometry>
   </collision>
 </link>
 
 <joint name="arm_gripper" type="revolute">
-  <origin rpy="0 0 0" xyz="-0.86859 0.043915 -0.029"/>
+  <origin rpy="0 0 0" xyz="0.078 0 0.025"/>
   <parent link="gripper"/>
   <child link="finger"/>
   <axis xyz="1.0 -0.0 0.0"/>
@@ -243,42 +251,27 @@
     <inertia ixx="0.002129" ixy="0.0" ixz="-0.0" iyy="0.001681" iyz="0.000162" izz="0.003403"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.87709 -0.823505 -0.0185"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/finger.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_7.dae" />
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.87709 -0.823505 -0.0185"/>
     <geometry>
-      <mesh filename="package://spot_arm/meshes/arm/finger_collision.dae" scale="0.1 0.1 0.1"/>
+      <mesh filename="package://spot_arm/meshes/arm/spot_7.dae" />
     </geometry>
   </collision>
 </link>
 
   <joint name="tool_tip_joint" type="fixed">
-    <origin xyz="0.0 0.2 0.0" rpy="-1.570796 0 0" />
+    <origin xyz="0.2 0.0 0.0" rpy="0 1.570796 0" />
     <parent link="gripper" />
     <child link="tool_tip" />
   </joint>
 
   <link name="tool_tip"/>
-
-  <joint name="finger_tip_joint" type="fixed">
-    <origin rpy="-1.570796 0 0" xyz="0 0.20 0"/>
-    <parent link="gripper"/>
-    <child link="finger_tip"/>
-  </joint>
-
-  <link name="finger_tip"/>
-
-   <link name="base_link"/>
-    <joint name="base_link_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <parent link="body" />
-        <child link="base_link" />
-    </joint>
 
     <link name="front_rail"/>
     <joint name="front_rail_joint" type="fixed">
@@ -536,4 +529,5 @@
         <child link="rear_right_lower_leg" />
         <limit effort="1000" velocity="1000.00" lower="-2.7929" upper="-0.257725" />
     </joint>
+
 </robot>
